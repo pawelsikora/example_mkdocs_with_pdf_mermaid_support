@@ -1,0 +1,136 @@
+<html><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Quick example to show support for ReLaXed in mkdocs-with-pdf" name="description"/>
+<link href="https://github.com/pawelsikora/example_mkdocs_with_pdf_mermaid_support.git/" rel="canonical"/>
+<meta content="Pawel Sikora" name="author"/>
+<link href="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/site/assets/images/favicon.png" rel="shortcut icon"/>
+<meta content="mkdocs-1.1.2, mkdocs-material-6.0.2" name="generator"/>
+<title>Example of mkdocs-with-pdf with Mermaid suppoert</title>
+<link href="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/site/assets/stylesheets/main.38780c08.min.css" rel="stylesheet"/>
+<link href="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/site/assets/stylesheets/palette.3f72e892.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+<link href="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/site/css/extra.css" rel="stylesheet"/>
+<style>:root {
+  string-set: author 'Pawel Sikora';
+  string-set: copyright 'ps 2020'; }
+
+h1, h2, h3 {
+  string-set: chapter content(); }
+@page{size:a4 portrait;margin:25mm 10mm 25mm 10mm;counter-increment:page;white-space:pre;color:grey;@top-right{font-size:9pt;content:string(chapter)}@bottom-center{font-size:9pt;content:"- " counter(page) "/" counter(pages) " -"}@bottom-right{font-size:9pt;content:string(copyright)}}@media print{body{background:none;background-color:#fff;font-size:9pt}}article,section+section{page-break-before:always;min-height:100vh}article,article h1,article h2,article h3,article h4,article h5,article h6,article div.tabbed-content--wrap>.tabbed-content,section+section,section+section h1,section+section h2,section+section h3,section+section h4,section+section h5,section+section h6,section+section div.tabbed-content--wrap>.tabbed-content{clear:both}article h1,article h2,article h3,article h4,article h5,article h6,article img,section+section h1,section+section h2,section+section h3,section+section h4,section+section h5,section+section h6,section+section img{page-break-after:avoid;page-break-inside:avoid}article a,article blockquote,article table,article ul,article ol,section+section a,section+section blockquote,section+section table,section+section ul,section+section ol{page-break-before:avoid;page-break-inside:avoid}article pre,article dt+dd,section+section pre,section+section dt+dd{page-break-before:avoid}article h1+ul,article h2+ul,article h3+ul,article h4+ul,article h5+ul,article h6+ul,article h1+ol,article h2+ol,article h3+ol,article h4+ol,article h5+ol,article h6+ol,section+section h1+ul,section+section h2+ul,section+section h3+ul,section+section h4+ul,section+section h5+ul,section+section h6+ul,section+section h1+ol,section+section h2+ol,section+section h3+ol,section+section h4+ol,section+section h5+ol,section+section h6+ol{page-break-inside:avoid}article div.admonition,section+section div.admonition{page-break-inside:avoid}article div.tabbed-content--wrap,section+section div.tabbed-content--wrap{page-break-inside:avoid}article *+div.highlight,article *+div.tabbed-set,section+section *+div.highlight,section+section *+div.tabbed-set{page-break-before:avoid}section.two-columns{columns:2;column-gap:1cm}article h1{border-bottom:2px solid #f00}article h2{border-bottom:1px solid #f99}article h3{border-bottom:0.5px solid #eee}article h1>.pdf-order,article h2>.pdf-order,article h3>.pdf-order{padding-left:6px}article#doc-toc{margin:0 .8rem 1.2rem;padding-top:.6rem;font-size:12pt;line-height:1.6}article#doc-toc>h1{margin:0 0 2rem;color:rgba(0,0,0,0.54);font-size:1.2rem;font-weight:300;letter-spacing:-.01em;page-break-after:auto;page-break-inside:auto;bookmark-level:none}article#doc-toc>h1::before{display:block;margin-top:-9px;padding-top:9px;content:""}article#doc-toc ul{list-style:none;padding-left:0;margin-left:1em;font-size:8pt;page-break-inside:auto !important}article#doc-toc li{list-style:none}article#doc-toc li>a{color:inherit;text-decoration:none;padding-top:0.4rem;border-bottom:1px dotted #ddd;display:inline-block;width:100%}article#doc-toc li>a>.pdf-order{padding-right:0.5em}article#doc-toc li>a::after{float:right;content:target-counter(attr(href), page)}@media print{html{font-size:95%;font-family:'Kelmscott Roman NF', 'Noto Serif JP', serif}body{font-size:10pt;font-family:'Classico URW T OT', 'Noto Serif JP', serif}article{font-size:1.2rem;line-height:1.8}h1,h2,h3,h4,h5,h6,label{font-family:'Gentium Book Basic', 'Helvetica Neue', Helvetica, Arial, 'Noto Sans JP', 'Roboto', sans-serif}pre,code,var,samp,kbd,tt{font-family:'Noto Sans Mono CJK JP', 'Courier New', monospace, serif;font-size:1.2em}pre code,pre var,pre samp,pre kbd,pre tt{font-size:100%}}
+@page :first{@top-right{content:normal}@bottom-center{content:normal}@bottom-right{content:normal}}article#doc-cover{display:flex;flex-direction:column;height:100vh}article#doc-cover>.wrapper{flex:1 0 auto;text-align:center;padding:0 3rem}article#doc-cover>.wrapper h1{font-size:36pt;line-height:1.4}article#doc-cover>.wrapper h2{border:none;bookmark-level:none}article#doc-cover>.properties{flex:0 0 auto;text-align:right;padding:0 2rem}article#doc-cover>.properties p#copyright{font-size:80%}
+</style><style>@page {
+    size: a4 portrait;
+    margin: 25mm 10mm 25mm 10mm;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    white-space: pre;
+    color: grey;
+    @bottom-right {
+        content: '© 2020 Pawel Sikora';
+	font-size: small;
+	color: #124191;
+    }
+    @bottom-center {
+        content: string(chapter);
+	font-size: small;
+    }
+    @top-left {
+	background:url(logo.jpeg) no-repeat;
+	content: '                   ';
+	width: 140px;
+	height: 80px;
+
+    }
+    @top-right {
+        content: 'Page ' counter(page) ' / ' counter(pages);
+	font-size: small;
+    }
+    h1 {
+        page-break-before: avoid;
+    }
+    h2 {
+        page-break-before: avoid;
+    }
+    h3, h4 {
+        page-break-after: avoid;
+    }
+    pre, blockquote {
+        page-break-inside: avoid;
+    }
+}
+
+</style></head><body><article id="doc-cover"><div class="wrapper"></div><div class="wrapper"><h1>Mermaid Support for mkdocs-with-pdf</h1><h2>Quick guide over mermaid diagrams support using mkdocs-with-pdf plugin</h2></div><div class="properties"><address><p id="author">Pawel Sikora</p><p id="copyright">ps 2020</p></address></div></article><article class="md-content__inner md-typeset" data-url="/." id=".:">
+
+<h1 id=".:example-mkdocs-with-pdf-for-mermaid-support"><span class="pdf-order">1. </span>Example mkdocs with pdf For Mermaid Support</h1>
+<p>Example of mkdocs project that supports mermaid diagrams generation using mkdocs-with-pdf plugin</p>
+<p>Use this repository as an example to generate mermaid diagrams:</p>
+<details class="optional-class" open=""><summary>Flowchart</summary><pre class="mermaid"><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+</details>
+<details class="optional-class" open=""><summary>Sequence diagram</summary><pre class="mermaid"><code>sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts <br/>prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre>
+</details>
+<details class="optional-class" open=""><summary>Gantt diagram</summary><pre class="mermaid"><code>gantt
+    dateFormat  YYYY-MM-DD
+    title Adding GANTT diagram to mermaid
+    excludes weekdays 2014-01-10
+
+    section A section
+    Completed task            :done,    des1, 2014-01-06,2014-01-08
+    Active task               :active,  des2, 2014-01-09, 3d
+    Future task               :         des3, after des2, 5d
+    Future task2               :         des4, after des3, 5d
+</code></pre>
+</details>
+<details class="optional-class" open=""><summary>Class diagram - <img alt="❗" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2757.svg" title=":exclamation:"/> experimental</summary><pre class="mermaid"><code>classDiagram
+    Class01 &lt;|-- AveryLongClass : Cool
+    Class03 *-- Class04
+    Class05 o-- Class06
+    Class07 .. Class08
+    Class09 --&gt; C2 : Where am i?
+    Class09 --* C3
+    Class09 --|&gt; Class07
+    Class07 : equals()
+    Class07 : Object[] elementData
+    Class01 : size()
+    Class01 : int chimp
+    Class01 : int gorilla
+    Class08 &lt;--&gt; C2: Cool label
+</code></pre>
+</details>
+<details class="optional-class" open=""><summary>Git Graph</summary><pre class="mermaid"><code>gitGraph:
+    options
+    {
+        "nodeSpacing": 150,
+        "nodeRadius": 10
+    }
+    end
+    commit
+    branch newbranch
+    checkout newbranch
+    commit
+    commit
+    checkout master
+    commit
+    commit
+    merge newbranch
+</code></pre>
+</details>
+</article><article id="doc-toc"><h1>Table Of Contents</h1><ul><li><a href="#.:example-mkdocs-with-pdf-for-mermaid-support"><span class="pdf-order">1. </span>Example mkdocs with pdf For Mermaid Support</a></li></ul></article><script src="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/docs/theme/../js/mermaid.min.js"></script><script src="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/docs/theme/../js/mermaid_window.js"></script><script src="file:///home/pasikora/evo/private/Repositories/example_mkdocs_with_pdf_mermaid_support/docs/theme/../js/mermaid_loader.js"></script></body></html>
