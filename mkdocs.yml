@@ -1,0 +1,113 @@
+# Project information
+site_name: "Example of mkdocs-with-pdf with Mermaid suppoert"
+site_description: 'Quick example to show support for ReLaXed in mkdocs-with-pdf'
+site_author: 'Pawel Sikora'
+site_url: 'https://github.com/pawelsikora/example_mkdocs_with_pdf_mermaid_support.git'
+docs_dir: 'docs'
+
+# Navigation bar
+nav:
+        - Home: 'index.md'
+       
+# Repo
+repo_name: 'Repo on Gitlab'
+repo_url: 'https://github.com/pawelsikora/example_mkdocs_with_pdf_mermaid_support.git'
+
+# Theme
+theme:
+       name: material 
+       features:
+         - navigation.instant
+         - navigation.tabs
+# Plugins
+plugins:
+  - search
+  - with-pdf:
+        author: Pawel Sikora
+        copyright: ps 2020
+        #
+        cover: true
+        cover_title: Mermaid Support for mkdocs-with-pdf
+        cover_subtitle: Quick guide over mermaid diagrams support using mkdocs-with-pdf plugin
+        #
+        toc_title: Table Of Contents
+        #heading_shift: false
+        toc_level: 3
+        ordered_chapter_level: 3
+        #excludes_children:
+        #    - 'release-notes/:upgrading'
+        #    - 'release-notes/:changelog'
+        #
+        #exclude_pages:
+        #    - 'bugs/'
+        #    - 'appendix/contribute/'
+        #convert_iframe:
+        #    - src: IFRAME SRC
+        #      img: POSTER IMAGE URL
+        #      text: ALTERNATE TEXT
+        #    - src: ...
+        #two_columns_level: 3
+        #
+        render_js: true
+        headless_chrome_path: google-chrome-stable 
+        #use_relaxed_js_renderer: true
+        theme_handler_path: 'docs/theme/material.py'
+        #
+        #output_path: any-place/document.pdf
+        output_pdf_name: Example_mkdocs_with_pdf_headless_chrome
+        #output_pdf_name: Example_mkdocs_with_pdf_relaxed_js
+        #enabled_if_env: ENABLE_PDF_EXPORT
+        #
+        debug_html: true
+        show_anchors: true
+        verbose: true
+  - mermaid2:
+        arguments:
+          theme: 'dark'
+          lineColor: 0xfffff
+  - git-show-history-log:
+          max_number_of_commits: 3
+  - git-authors:
+        show_contribution: true
+        show_line_count: false
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - js/mermaid_window.js
+  - js/mermaid_loader.js
+  - js/version_select.js
+
+markdown_extensions:
+  - toc
+  - markdown.extensions.toc:
+      permalink: ""
+  - markdown.extensions.admonition:
+  - markdown.extensions.smarty:
+      smart_quotes: false
+  - attr_list
+  - sane_lists
+  - pymdownx.tasklist:
+          custom_checkbox: true
+  - pymdownx.snippets:
+         base_path: .
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.progressbar
+  - pymdownx.highlight
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.superfences:
+       custom_fences:
+        - name: 'mermaid'
+          class: 'mermaid'
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  generator: false
+         
+copyright: 'Copyright 2020, Pawel Sikora'
