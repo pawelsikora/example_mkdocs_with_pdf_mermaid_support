@@ -50,12 +50,12 @@ plugins:
         #
         render_js: true
         headless_chrome_path: google-chrome-stable 
-        #use_relaxed_js_renderer: true
+        use_relaxed_js_renderer: true
         theme_handler_path: 'docs/theme/material.py'
         #
         #output_path: any-place/document.pdf
-        output_pdf_name: Example_mkdocs_with_pdf_headless_chrome
-        #output_pdf_name: Example_mkdocs_with_pdf_relaxed_js
+        #output_pdf_name: Example_mkdocs_with_pdf_headless_chrome
+        output_pdf_name: Example_mkdocs_with_pdf_relaxed_js
         #enabled_if_env: ENABLE_PDF_EXPORT
         #
         debug_html: true

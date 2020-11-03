@@ -1,0 +1,41 @@
+@page {
+    size: a4 portrait;
+    margin: 25mm 10mm 25mm 10mm;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    white-space: pre;
+    color: grey;
+    @bottom-right {
+        content: '© 2020 Pawel Sikora';
+	font-size: small;
+	color: #124191;
+    }
+    @bottom-center {
+        content: string(chapter);
+	font-size: small;
+    }
+    @top-left {
+	background:url(logo.jpeg) no-repeat;
+	content: '                   ';
+	width: 140px;
+	height: 80px;
+
+    }
+    @top-right {
+        content: 'Page ' counter(page) ' / ' counter(pages);
+	font-size: small;
+    }
+    h1 {
+        page-break-before: avoid;
+    }
+    h2 {
+        page-break-before: avoid;
+    }
+    h3, h4 {
+        page-break-after: avoid;
+    }
+    pre, blockquote {
+        page-break-inside: avoid;
+    }
+}
+
